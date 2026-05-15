@@ -177,7 +177,7 @@ namespace forte {
 
           if(!exportOk) {
 
-            var_QO = false;
+            var_QO.setValue(false);
             var_STATUS = 1;
 
             sendOutputEvent(
@@ -219,13 +219,13 @@ namespace forte {
 
         if(ok1 && ok2 && ok3) {
 
-          var_QO = true;
-          var_STATUS = 0;
+          var_QO.setValue(true);
+          var_STATUS.setValue(0);
 
         } else {
 
-          var_QO = false;
-          var_STATUS = 2;
+          var_QO.setValue(false);
+          var_STATUS.setValue(2);
         }
 
         sendOutputEvent(
@@ -269,11 +269,11 @@ namespace forte {
 
         if(ok1 && ok2 && ok3) {
 
-          var_STATUS = 0;
+          var_STATUS.setValue(0);
 
         } else {
 
-          var_STATUS = 3;
+          var_STATUS.setValue(3);
         }
 
         sendOutputEvent(
